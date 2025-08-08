@@ -4,7 +4,7 @@ This project implements a task management system with comments functionality, bu
 
 ## Project Overview
 
-The application allows users to create, read, update, and delete (CRUD) tasks and associated comments. It emphasizes clean architecture, maintainability, and robust error handling. The backend exposes RESTful APIs, and the frontend provides a responsive UI to interact with these APIs.
+The application enables users to perform CRUD (Create, Read, Update, Delete) operations on tasks and their associated comments. It prioritizes clean architecture, maintainability, and robust error handling. The backend provides RESTful APIs, while the frontend offers a responsive UI to interact with these APIs.
 
 ## Folder Structure
 
@@ -13,17 +13,17 @@ The application allows users to create, read, update, and delete (CRUD) tasks an
 
 ## Requirements
 
-- **Backend**:
-  - Python 3.8+
-  - Flask, SQLAlchemy, Pytest
-- **Frontend**:
-  - Node.js 16+
-  - React 18, Create React App
+### Backend
+- Python 3.8+
+- Flask, SQLAlchemy, Pytest
+
+### Frontend
+- Node.js 16+
+- React 18, Create React App
 
 ## Setup Instructions
 
 ### Backend
-
 1. Create and activate a virtual environment:
    ```bash
    python -m venv .venv
@@ -45,7 +45,6 @@ The application allows users to create, read, update, and delete (CRUD) tasks an
    Expected output: `{"status":"ok"}`
 
 ### Frontend
-
 1. Navigate to the frontend directory:
    ```bash
    cd frontend
@@ -58,21 +57,22 @@ The application allows users to create, read, update, and delete (CRUD) tasks an
    ```bash
    npm start
    ```
-   The app will run at `http://localhost:3000`, with API requests proxied to `http://127.0.0.1:5000`.
+   The app runs at `http://localhost:3000`, with API requests proxied to `http://127.0.0.1:5000`.
 
 ## API Endpoints
 
-- **Tasks**:
-  - `GET /api/tasks`: List all tasks
-  - `POST /api/tasks`: Create a task
-  - `GET /api/tasks/:id`: Get a task
-  - `PUT /api/tasks/:id`: Update a task
-  - `DELETE /api/tasks/:id`: Delete a task
-- **Comments**:
-  - `GET /api/tasks/:taskId/comments`: List comments for a task
-  - `POST /api/tasks/:taskId/comments`: Create a comment
-  - `PUT /api/tasks/:taskId/comments/:commentId`: Update a comment
-  - `DELETE /api/tasks/:taskId/comments/:commentId`: Delete a comment
+### Tasks
+- `GET /api/tasks`: List all tasks
+- `POST /api/tasks`: Create a task
+- `GET /api/tasks/:id`: Get a task
+- `PUT /api/tasks/:id`: Update a task
+- `DELETE /api/tasks/:id`: Delete a task
+
+### Comments
+- `GET /api/tasks/:taskId/comments`: List comments for a task
+- `POST /api/tasks/:taskId/comments`: Create a comment
+- `PUT /api/tasks/:taskId/comments/:commentId`: Update a comment
+- `DELETE /api/tasks/:taskId/comments/:commentId`: Delete a comment
 
 ## Running Tests
 
@@ -86,18 +86,19 @@ Tests cover task and comment CRUD operations, validation, and error cases (e.g.,
 
 ## Key Features
 
-- **Backend**:
-  - Flask app factory pattern for testability.
-  - SQLAlchemy models with `TimestampMixin` for consistent timestamps.
-  - Cascade deletes for comments when tasks are removed.
-  - JSON error responses (400/404/500) with logging.
-  - SQLite database in Flask instance folder, with `DATABASE_URL` override support.
-- **Frontend**:
-  - React function components with hooks for state management.
-  - `api.js` layer for clean API calls and error handling.
-  - Proxy setup to avoid CORS issues.
-  - Responsive UI with task list, task details, and comment management.
-  - Validation feedback and error messaging.
+### Backend
+- Flask app factory pattern for testability.
+- SQLAlchemy models with `TimestampMixin` for consistent timestamps.
+- Cascade deletes for comments when tasks are removed.
+- JSON error responses (400/404/500) with logging.
+- SQLite database in Flask instance folder, with `DATABASE_URL` override support.
+
+### Frontend
+- React function components with hooks for state management.
+- `api.js` layer for clean API calls and error handling.
+- Proxy setup to avoid CORS issues.
+- Responsive UI with task list, task details, and comment management.
+- Validation feedback and error messaging.
 
 ## Troubleshooting
 
@@ -107,14 +108,14 @@ Tests cover task and comment CRUD operations, validation, and error cases (e.g.,
 
 ## Next Steps
 
-- **Frontend**: Add pagination, search, optimistic updates, and component tests.
-- **Backend**: Implement authentication, pagination, filtering, CORS, and Dockerization.
+- **Frontend**: Implement pagination, search, optimistic updates, and component tests.
+- **Backend**: Add authentication, pagination, filtering, CORS, and Dockerization.
 - **Deployment**: Containerize with Docker Compose or deploy to a PaaS.
 
 ## Assumptions
 
 - SQLite is sufficient for the assessment; a production app might use PostgreSQL.
-- No authentication is implemented, as it wasn’t specified.
+- Authentication was not implemented, as it wasn’t specified.
 - Basic styling is used for clarity; a production app would include a design system (e.g., Tailwind CSS).
 
 ## Video Walkthrough
@@ -125,3 +126,4 @@ A 6–7 minute video is provided, covering:
 - End-to-end demo (task/comment CRUD, error handling).
 - Code quality, testing, and maintainability.
 - Troubleshooting and next steps.
+https://www.loom.com/share/ed423b69e9a847aba6f2636c27a643ba?sid=1d7bcc8c-f159-4f11-ae19-8258dcd78c0f
