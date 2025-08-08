@@ -1,0 +1,56 @@
+# Python/Flask
+# Virtual environment
+.venv/
+venv/
+env/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Python bytecode and cache
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Flask instance folder (SQLite DB, etc.)
+instance/
+
+# Environment variables
+.env
+*.env
+
+# Logs and temporary files
+*.log
+*.pid
+*.seed
+*.sqlite3
+
+# Node.js/React
+# Node modules
+node_modules/
+
+# Build output
+frontend/build/
+dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Testing and coverage
+coverage/
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Miscellaneous
+*.swp
+*.bak
+*.tmp
